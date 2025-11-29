@@ -1,0 +1,8 @@
+ERD and diagram reference:
+Use the dbdiagram link to view the ERD visually.
+
+dbdiagram link:
+https://dbdiagram.io/d/692aa93dd6676488badf375f
+
+Notes:
+- Export the diagram as PNG from dbdiagram.io and include in 01_schema/erd.png if desired.

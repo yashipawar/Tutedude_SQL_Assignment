@@ -1,0 +1,15 @@
+-- 04_optimization/explain_before.txt
+-- Placeholder: Run these EXPLAIN ANALYZE commands before adding indexes and paste MySQL output here.
+
+EXPLAIN ANALYZE SELECT o.order_id, SUM(oi.price), SUM(op.payment_value)
+FROM orders o
+JOIN order_items oi ON o.order_id = oi.order_id
+JOIN order_payments op ON o.order_id = op.order_id
+GROUP BY o.order_id;
+
+EXPLAIN ANALYZE SELECT p.product_id, SUM(oi.price) AS rev
+FROM products p
+JOIN order_items oi ON p.product_id = oi.product_id
+GROUP BY p.product_id;
+
+EXPLAIN ANALYZE SELECT customer_id, COUNT(*) FROM orders GROUP BY customer_id;
